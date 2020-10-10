@@ -10,16 +10,16 @@ body{
 p.explain{
     font-size: 20px;
 }
-img.a{
+img.gyeyang_img{
     border: 5px solid black;
     border-radius: 100px;
     position: relative;
     top: 10px;
 }
-img.b{
+img.drama_img{
     position: relative;
     top: -30px;
 }
-img.c{
+img.mamamoo_img{
     position: static;
 }
