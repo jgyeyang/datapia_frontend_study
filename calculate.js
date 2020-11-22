@@ -1,33 +1,32 @@
+const display = document.getElementById("display");
+const resultDisplay = document.getElementById("result")
+const history = document.getElementById("history")
 function add(num){
-    const display = document.getElementById("display");
     display.value += num;
 }
 
-function calculate(){
-    const display = document.getElementById("display");
+function calculate(){    
     const result = eval(display.value);
-    document.getElementById("result").value = result;
-    document.getElementById("display").value = "";
-    document.getElementById("history").value+=diplay+"\n";
-    document.getElementById("history").value+=result+"\n";
+    resultDisplay.value = result;
+    history.value+=display.value+"\n";
+    history.value+=result+"\n";
+    display.value = "";
 }
 
-function reset(){
-    const display = document.getElementById("display");
-    document.getElementById("result").value = "";
+function reset(){    
+    resultDisplay.value = "";
 }
 
 function del(){
-    const display = document.getElementById("display");
     display.value = display.value.substring(0,display.value.length-1);
 }
 
 const open = document.getElementById("open");
 const close = document.getElementById("close");
 const modal = document.querySelector(".modal-wrapper");
-open.onclick = () => {
+open.addEventListener('click',() => {
     modal.style.display = "flex";
-};
-close.onclick = () => {
+})
+close.addEventListener('click',() => {
     modal.style.display = "none";
-};
+})

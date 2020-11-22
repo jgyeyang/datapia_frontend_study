@@ -5,3 +5,6 @@ td{
 input{
     text-align: right;
 }
+.modal-wrapper{
+   display : none;
+}
